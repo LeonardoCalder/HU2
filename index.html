@@ -6,14 +6,15 @@
   <title>Solicitud Médica</title>
   <style>
     :root {
-      --bg: #f4f7fa;
+      --bg: #e8fdf5;
       --card: #ffffff;
-      --primary: #4a90e2;
-      --accent: #50e3c2;
-      --text: #33475b;
-      --input-bg: #ecf0f1;
-      --border: #dce3e8;
+      --primary: #2dcbb2;
+      --accent: #26b196;
+      --text: #1e3f3a;
+      --input-bg: #f0fdfa;
+      --border: #b8e2d9;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background: var(--bg);
@@ -21,24 +22,29 @@
       font-family: 'Arial', sans-serif;
       padding: 2rem;
     }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
       background: var(--card);
       padding: 2rem;
-      border-radius: 8px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
     }
+
     h1 {
       text-align: center;
       color: var(--primary);
       margin-bottom: 1.5rem;
     }
+
     form {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
     }
+
     @media (min-width: 600px) {
       form {
         grid-template-columns: 1fr 1fr;
@@ -47,32 +53,39 @@
         grid-column: 1 / -1;
       }
     }
+
     label {
       display: block;
       font-size: 0.9rem;
       margin-bottom: 0.3rem;
+      font-weight: bold;
     }
+
     input, select, textarea, button {
       width: 100%;
       padding: 0.75rem;
-      border-radius: 4px;
+      border-radius: 6px;
       border: 1px solid var(--border);
       font-size: 1rem;
     }
+
     input, select, textarea {
       background: var(--input-bg);
     }
+
     textarea {
       resize: vertical;
       min-height: 80px;
     }
+
     button {
       background: var(--primary);
-      color: #fff;
+      color: white;
       border: none;
       cursor: pointer;
       transition: background 0.3s;
     }
+
     button:hover {
       background: var(--accent);
     }
@@ -98,6 +111,10 @@
         <label for="cedula">Cédula *</label>
         <input type="text" id="cedula" required placeholder="Número de cédula" />
       </div>
+      <div>
+        <label for="especialidad">Especialidad médica *</label>
+        <input type="text" id="especialidad" required placeholder="Ej: Ginecología, Cardiología..." />
+      </div>
       <div class="full">
         <label for="dx">Diagnóstico *</label>
         <textarea id="dx" required placeholder="Descripción del diagnóstico"></textarea>
@@ -117,9 +134,21 @@
       <div>
         <label for="hora">Horario</label>
         <select id="hora">
-          <option value="matutino">08–12</option>
-          <option value="vespertino">12–16</option>
-          <option value="nocturno">16–20</option>
+          <!-- Horas desde 6:00 a.m. hasta 7:00 p.m. -->
+          <option value="06:00">06:00</option>
+          <option value="07:00">07:00</option>
+          <option value="08:00">08:00</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+          <option value="19:00">19:00</option>
         </select>
       </div>
       <div class="full">
