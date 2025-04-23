@@ -30,7 +30,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
   console.log(serviceRequestData);
 
   // Enviar la solicitud al backend
-  fetch('historia-clinica-2.onrender.com/service-request/', {
+  fetch('https://historia-clinica-2.onrender.com/service-request/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(serviceRequestData)
