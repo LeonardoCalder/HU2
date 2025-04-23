@@ -8,7 +8,6 @@ document.getElementById('form').addEventListener('submit', function(event) {
   const cedula        = document.getElementById('cedula').value;
   const especialidad  = document.getElementById('especialidad').value;
   const dx            = document.getElementById('dx').value;
-  const cie11         = document.getElementById('cie11').value;
   const proc          = document.getElementById('proc').value;
   const just          = document.getElementById('just').value;
   const fechaCita     = document.getElementById('fechaCita').value;
@@ -21,7 +20,6 @@ document.getElementById('form').addEventListener('submit', function(event) {
     cedula,
     especialidad,
     diagnostico: dx,
-    cie11, // Nuevo campo
     procedimiento: proc,
     justificacion: just,
     fechaCita,
@@ -39,7 +37,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     if (!response.ok) {
       throw new Error('Error en la solicitud: ' + response.statusText);
     }
-
+    // sólo parsear JSON si el servidor lo devuelve
     const ct = response.headers.get('content-type') || '';
     if (ct.includes('application/json')) {
       const data = await response.json();
