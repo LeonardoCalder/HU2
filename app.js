@@ -8,6 +8,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
   const cedula        = document.getElementById('cedula').value;
   const especialidad  = document.getElementById('especialidad').value;
   const dx            = document.getElementById('dx').value;
+  const cie11         = document.getElementById('cie11').value;
   const proc          = document.getElementById('proc').value;
   const just          = document.getElementById('just').value;
   const fechaCita     = document.getElementById('fechaCita').value;
