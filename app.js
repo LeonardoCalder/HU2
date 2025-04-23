@@ -1,6 +1,7 @@
 document.getElementById('form').addEventListener('submit', function(event) {
   event.preventDefault();
- 
+
+  
   // Obtener los valores del formulario
   const paciente = document.getElementById('paciente').value;
   const consulta = document.getElementById('consulta').value;
