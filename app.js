@@ -28,7 +28,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
 
   console.log('Enviando:', serviceRequestData);
 
-  fetch('https://historia-clinica-2.onrender.com/service-request/', {
+  fetch('https://hl7-fhir-ehr-leonardo.onrender.com/service-request/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(serviceRequestData)
